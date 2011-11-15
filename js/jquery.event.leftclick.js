@@ -1,12 +1,11 @@
 /**
  * @author fliptheweb
- * Based on http://brandonaaron.net/blog/2010/02/25/special-events-the-changes-in-1-4-2
  */
 (function($) {
 	$.event.special.leftclick = {
 		add: function(handleObj) {
-			// support fot jQuery 1.4/1.4.1 and 1.4.2+
-			if ( $.isFunction( handleObj ) ) {
+			// support fot jQuery 1.4/1.4.1 and 1.4.2+ (https://gist.github.com/298508)
+			if ($.isFunction( handleObj)) {
 				$.event.special.leftclick.handler = handleObj;
 			}
 			else {
