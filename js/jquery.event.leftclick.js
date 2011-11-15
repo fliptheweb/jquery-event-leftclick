@@ -2,7 +2,7 @@
  * Plugin add new left click event to jQuery
  * @author fliptheweb
  * @version 1.0.0
- * @link 
+ * @link http://github.com/fliptheweb/jquery-event-leftclick/
  */
 (function($) {
 	$.event.special.leftclick = {
