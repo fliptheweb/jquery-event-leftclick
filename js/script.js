@@ -10,12 +10,13 @@ $(document).ready(function() {
 	$(".b-targets__item2").bind("leftclick", {somevar: "somedata" }, function(e){
 		$("</p>")
 			.appendTo($events)
-			.text("Click to " + e.target.className + " with data " + e.data);
+			.text("Click to " + e.target.className + " with data " + JSON.stringify(e.data));
 	});
 
 	$(".b-targets__item3").bind("leftclick", function(e){
 		$("</p>")
 			.appendTo($events)
-			.text("Click to 123"+e.target.className);
+			.text("Click to "+e.target.className);
+		$(e.target).unbind("leftclick");
 	});
 });
