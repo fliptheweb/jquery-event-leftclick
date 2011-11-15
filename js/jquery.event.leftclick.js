@@ -1,4 +1,5 @@
 /**
+ * Plugin add new left click event to jQuery
  * @author fliptheweb
  */
 (function($) {
