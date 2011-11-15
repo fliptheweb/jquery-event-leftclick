@@ -7,7 +7,7 @@ $(document).ready(function() {
 			.text(getHandlerInfo(e));
 	});
 
-	$(".b-targets__item2").bind("leftclick", {somevar: "somedata" }, function(e){
+	$(".b-targets__item2").bind("leftclick", {"somevar": "somedata" }, function(e){
 		$("</p>")
 			.appendTo($events)
 			.text(getHandlerInfo(e));

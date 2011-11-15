@@ -5,9 +5,12 @@
 }
 body{
 	padding: 20px;
+	font-family: "Tahoma", "Arial", sens-serif;
 }
 .b-targets{
 	overflow: hidden;
+	padding: 20px;
+	margin-left: -20px;
 }
 .b-targets__item1,
 .b-targets__item2,
@@ -15,12 +18,21 @@ body{
 	width: 200px;
 	height: 200px;
 	line-height: 200px;
-	background: #666;
 	text-align: center;
 	cursor: pointer;
-	border: 1px solid #000;
+	border: 1px solid #aaa;
 	margin-right: 20px;
 	float: left;
+	box-shadow: 0 0 10px 0 #999;
+}
+.b-targets__item1{
+	background: #cdffb7;
+}
+.b-targets__item2{
+	background: #ffcfcf;
+}
+.b-targets__item3{
+	background: #fbffcf;
 }
 .b-events{
 	padding-top: 20px;

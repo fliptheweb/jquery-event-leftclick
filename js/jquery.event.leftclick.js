@@ -1,6 +1,8 @@
 /**
  * Plugin add new left click event to jQuery
  * @author fliptheweb
+ * @version 1.0.0
+ * @link 
  */
 (function($) {
 	$.event.special.leftclick = {
@@ -13,7 +15,7 @@
 		},
 
 		handler: function(e) {
-			if((!$.browser.msie && e.button == 0) || ($.browser.msie && e.button == 1)) {
+			if(e.which == 1) {
 				e.type = "leftclick";
 				$.event.handle.apply(this, arguments);
 			}
