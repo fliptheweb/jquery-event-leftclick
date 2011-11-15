@@ -1,6 +1,7 @@
 $(document).ready(function() {
-	$(".target").bind("leftclick", function(){
+	$(".target").bind("leftclick", function(e){
 		console.log("!");
-		$(this).unbind("leftclick");
+		$(e.target).unbind("leftclick");
 	});
+
 });

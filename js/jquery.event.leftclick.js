@@ -27,7 +27,7 @@
 		},
 
 		teardown: function(namespaces) {
-			$this.unbind("mousedown.leftclick");
+			$(this).unbind("mousedown.leftclick");
 		},
 
 		handler: function() {}
