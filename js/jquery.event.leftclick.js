@@ -4,7 +4,7 @@
  */
 (function($) {
 	$.event.special.leftclick = {
-		add: function(handleObj ) {
+		add: function(handleObj) {
 			// support fot jQuery 1.4/1.4.1 and 1.4.2+
 			if ( $.isFunction( handleObj ) ) {
 				$.event.special.leftclick.handler = handleObj;
@@ -17,19 +17,17 @@
 		setup: function(data, namespaces) {
 			$(this).bind("mousedown.leftclick", function(e){
 				if((!$.browser.msie && e.button == 0) || ($.browser.msie && e.button == 1)) {
-					$.event.special.leftclick.handler();
+					e.type = "leftclick";
+					e.data = data;
+					$.event.special.leftclick.handler(e);
 				}
 			});
-		},
-
-		remove: function(namespaces) {
-			
 		},
 
 		teardown: function(namespaces) {
 			$(this).unbind("mousedown.leftclick");
 		},
 
-		handler: function() {}
+		handler: function(e) {}
 	};
 })(jQuery);
